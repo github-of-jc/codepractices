@@ -1,0 +1,16 @@
+def hourglassSum(arr):
+    i = -1
+    j = -1
+    sum = -100
+    tempSum = 0
+    for i in range(4):
+        for j in range(4):
+            tempSum= arr[i][j] + arr[i][j+1] + arr[i][j+2] + arr[i+1][j+1] + arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2]
+            print(tempSum)
+            if tempSum > sum:
+                sum = tempSum
+            print('tempsum is now ' + str(sum))
+            print('sum is now ' + str(sum))
+    print(arr)
+    print(sum)
+    return sum
